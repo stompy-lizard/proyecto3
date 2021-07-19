@@ -37,10 +37,6 @@ class GameUI(bundle: I18NBundle) : Group() {
     private val warningImage = scene2d.image(SkinImage.WARNING.atlasKey) {
         color.a = 0f
     }
-    private val lifeBarImage = scene2d.image(SkinImage.LIFE_BAR.atlasKey) {
-        width = GAME_HUD_SMALL_AREA_WIDTH
-        height = GAME_HUD_AREA_HEIGHT
-    }
     private val shieldBarImage = scene2d.image(SkinImage.SHIELD_BAR.atlasKey) {
         width = GAME_HUD_SMALL_AREA_WIDTH
         height = GAME_HUD_AREA_HEIGHT
@@ -93,12 +89,6 @@ class GameUI(bundle: I18NBundle) : Group() {
         this += warningImage.apply {
             setPosition(gameHudX, gameHudHeight)
         }
-        this += lifeBarImage.apply {
-            setPosition(
-                gameHudX + GAME_HUD_BORDER_SIZE_X,
-                gameHudHeight * 0.5f - height * 0.5f
-            )
-        }
         this += shieldBarImage.apply {
             setPosition(
                 gameHudX + GAME_HUD_BORDER_SIZE_X,
@@ -136,7 +126,7 @@ class GameUI(bundle: I18NBundle) : Group() {
     }
 
     fun updateLife(life: Float, maxLife: Float) {
-        lifeBarImage.scaleX = MathUtils.clamp(life / maxLife, 0f, 1f)
+
     }
 
     fun updateShield(shield: Float, maxShield: Float) {
