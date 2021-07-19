@@ -23,9 +23,7 @@ class MenuUI(private val bundle: I18NBundle) {
     val table: KTableWidget
     val startGameButton: TextButton
     val soundButton: ImageButton
-    val controlButton: TextButton
     private val highScoreButton: TextButton
-    val creditsButton: TextButton
     val quitGameButton: TextButton
 
     init {
@@ -41,20 +39,15 @@ class MenuUI(private val bundle: I18NBundle) {
                 }
             }
             row()
-
+            row()
+            row()
             startGameButton = textButton(bundle["startGame"], SkinTextButton.DEFAULT.name)
             row()
 
             soundButton = imageButton(SkinImageButton.SOUND_ON_OFF.name).cell(colspan = 1, expandX = false)
-            controlButton = textButton(bundle["control"], SkinTextButton.DEFAULT.name) { cell ->
-                cell.colspan(1)
-            }
             row()
 
             highScoreButton = textButton(bundle["highscore", 0], SkinTextButton.LABEL.name)
-            row()
-
-            creditsButton = textButton(bundle["credit"], SkinTextButton.DEFAULT.name)
             row()
 
             quitGameButton = textButton(bundle["quitGame"], SkinTextButton.DEFAULT.name)
