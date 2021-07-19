@@ -56,15 +56,9 @@ class PowerUpSystem(
     private var spawnTime = 0f
     private val spawnPatterns = gdxArrayOf(
         SpawnPattern(type1 = PowerUpType.SPEED_1, type2 = PowerUpType.SPEED_2, type5 = PowerUpType.SHIELD),
-        SpawnPattern(type1 = PowerUpType.SPEED_2, type2 = PowerUpType.LIFE, type5 = PowerUpType.SPEED_1),
+        SpawnPattern(type1 = PowerUpType.SPEED_2, type2 = PowerUpType.SHIELD, type5 = PowerUpType.SPEED_1),
         SpawnPattern(type2 = PowerUpType.SPEED_1, type4 = PowerUpType.SPEED_1, type5 = PowerUpType.SPEED_1),
-        SpawnPattern(type2 = PowerUpType.SPEED_1, type4 = PowerUpType.SPEED_1),
-        SpawnPattern(
-            type1 = PowerUpType.SHIELD,
-            type2 = PowerUpType.SHIELD,
-            type4 = PowerUpType.LIFE,
-            type5 = PowerUpType.SPEED_2
-        )
+        SpawnPattern(type2 = PowerUpType.SPEED_1, type4 = PowerUpType.SPEED_1)
     )
     private val currentSpawnPattern = GdxArray<PowerUpType>(spawnPatterns.size)
 

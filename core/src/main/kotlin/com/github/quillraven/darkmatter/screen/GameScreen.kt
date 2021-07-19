@@ -163,7 +163,6 @@ class GameScreen(game: Game) : Screen(game, MusicAsset.GAME), GameEventListener 
     private fun onPlayerPowerUp(event: GameEvent.PowerUp) {
         event.player[PlayerComponent.mapper]?.let { player ->
             when (event.type) {
-                PowerUpType.LIFE -> ui.updateLife(player.life, player.maxLife)
                 PowerUpType.SHIELD -> ui.updateShield(player.shield, player.maxShield)
                 else -> {
                     // ignore

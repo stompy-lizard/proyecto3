@@ -76,8 +76,6 @@ class DebugSystem(
                     }
                     Gdx.input.isKeyPressed(Input.Keys.NUM_7) -> {
                         // trigger player heal event
-                        engine.getSystem<PowerUpSystem>()
-                            .spawnPowerUp(PowerUpType.LIFE, transform.position.x, transform.position.y)
                     }
                     Gdx.input.isKeyPressed(Input.Keys.NUM_8) -> {
                         // play three random sounds

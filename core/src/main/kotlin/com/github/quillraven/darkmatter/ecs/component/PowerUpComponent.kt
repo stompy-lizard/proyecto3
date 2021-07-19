@@ -15,7 +15,6 @@ enum class PowerUpType(
     NONE(AnimationType.NONE, SoundAsset.EXPLOSION),
     SPEED_1(AnimationType.BOOST_1, SoundAsset.BOOST_1, speedGain = 3f),
     SPEED_2(AnimationType.BOOST_2, SoundAsset.BOOST_2, speedGain = 3.75f),
-    LIFE(AnimationType.LIFE, SoundAsset.LIFE, lifeGain = 25f),
     SHIELD(AnimationType.SHIELD, SoundAsset.SHIELD, shieldGain = 25f)
 }
 

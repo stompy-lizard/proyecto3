@@ -18,7 +18,6 @@ enum class AnimationType(
     FIRE("fire"),
     BOOST_1("orb_blue", speed = 0.5f),
     BOOST_2("orb_yellow", speed = 0.5f),
-    LIFE("life"),
     SHIELD("shield", speed = 0.75f),
     DARK_MATTER("dark_matter", speed = 3f),
     EXPLOSION("explosion", Animation.PlayMode.NORMAL, speed = 0.5f)
