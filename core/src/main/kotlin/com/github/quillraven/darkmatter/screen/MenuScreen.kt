@@ -33,12 +33,6 @@ class MenuScreen(game: Game) : Screen(game, MusicAsset.MENU) {
                 this[PREFERENCE_MUSIC_ENABLED_KEY] = audioService.enabled
             }
         }
-        controlButton.onClick {
-            controlsDialog.show(stage)
-        }
-        creditsButton.onClick {
-            creditsDialog.show(stage)
-        }
         quitGameButton.onClick {
             confirmDialog.show(stage)
         }
@@ -47,8 +41,6 @@ class MenuScreen(game: Game) : Screen(game, MusicAsset.MENU) {
         yesButton.onClick { Gdx.app.exit() }
         noButton.onClick { hide() }
     }
-    private val creditsDialog = TextDialog(bundle, "credits")
-    private val controlsDialog = TextDialog(bundle, "controls")
 
     override fun show() {
         super.show()
