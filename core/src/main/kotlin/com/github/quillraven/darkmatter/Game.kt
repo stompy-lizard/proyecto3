@@ -21,7 +21,6 @@ import com.github.quillraven.darkmatter.ecs.system.DamageSystem
 import com.github.quillraven.darkmatter.ecs.system.DebugSystem
 import com.github.quillraven.darkmatter.ecs.system.MoveSystem
 import com.github.quillraven.darkmatter.ecs.system.PlayerAnimationSystem
-import com.github.quillraven.darkmatter.ecs.system.PlayerColorSystem
 import com.github.quillraven.darkmatter.ecs.system.PlayerInputSystem
 import com.github.quillraven.darkmatter.ecs.system.PowerUpSystem
 import com.github.quillraven.darkmatter.ecs.system.RemoveSystem
@@ -86,7 +85,6 @@ class Game : KtxGame<KtxScreen>() {
             addSystem(AttachSystem())
             addSystem(AnimationSystem(atlas))
             addSystem(CameraShakeSystem(gameViewport.camera, gameEventManager))
-            addSystem(PlayerColorSystem(gameEventManager))
             addSystem(
                 RenderSystem(
                     stage,
