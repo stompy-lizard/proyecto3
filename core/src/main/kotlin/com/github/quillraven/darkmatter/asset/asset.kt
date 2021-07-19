@@ -31,9 +31,9 @@ enum class MusicAsset(
     directory: String = "music",
     val descriptor: AssetDescriptor<Music> = AssetDescriptor("$directory/$fileName", Music::class.java)
 ) {
-    GAME("game.mp3"),
+    GAME("game_alt.mp3"),
     GAME_OVER("gameOver.mp3"),
-    MENU("menu.mp3")
+    MENU("menu_alt.mp3")
 }
 
 enum class TextureAtlasAsset(
@@ -51,7 +51,7 @@ enum class TextureAsset(
     directory: String = "graphics",
     val descriptor: AssetDescriptor<Texture> = AssetDescriptor("$directory/$fileName", Texture::class.java)
 ) {
-    BACKGROUND("background.png")
+    BACKGROUND("spr_stars02.png")
 }
 
 enum class ShaderProgramAsset(
