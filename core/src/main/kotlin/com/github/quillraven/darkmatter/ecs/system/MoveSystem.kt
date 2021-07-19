@@ -22,8 +22,8 @@ import kotlin.math.min
 
 private const val VER_ACCELERATION = 2.25f
 private const val HOR_ACCELERATION = 16.5f
-private const val MAX_VER_NEG_PLAYER_SPEED = 0.75f
-private const val MAX_VER_POS_PLAYER_SPEED = 5f
+private const val MAX_VER_NEG_PLAYER_SPEED = 0f
+private const val MAX_VER_POS_PLAYER_SPEED = 0f
 private const val MAX_HOR_SPEED = 5.5f
 private const val UPDATE_RATE = 1 / 25f
 
