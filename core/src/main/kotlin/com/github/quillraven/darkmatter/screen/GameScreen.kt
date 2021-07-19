@@ -148,7 +148,6 @@ class GameScreen(game: Game) : Screen(game, MusicAsset.GAME), GameEventListener 
             is GameEvent.PlayerHit -> {
                 ui.run {
                     updateLife(event.life, event.maxLife)
-                    showWarning()
                 }
             }
             is GameEvent.PowerUp -> {

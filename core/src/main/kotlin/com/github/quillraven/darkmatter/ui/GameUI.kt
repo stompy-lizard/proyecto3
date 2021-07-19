@@ -143,9 +143,4 @@ class GameUI(bundle: I18NBundle) : Group() {
         shieldBarImage.color.a = MathUtils.clamp(shield / maxShield, 0f, 1f)
     }
 
-    fun showWarning() {
-        if (warningImage.actions.size <= MAX_WARNING_FLASHES) {
-            warningImage += sequence(fadeIn(ACTOR_FADE_IN_TIME) + fadeOut(ACTOR_FADE_OUT_TIME))
-        }
-    }
 }
