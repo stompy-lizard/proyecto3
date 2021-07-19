@@ -94,15 +94,11 @@ class LoadingScreen(
                 touchToBegin = label(bundle["touchToBegin"], SkinLabel.LARGE.name) { cell ->
                     wrap = true
                     setAlignment(Align.center)
-                    color.a = 0f
                     cell.padLeft(ELEMENT_PADDING).padRight(ELEMENT_PADDING).top().expandY()
                 }
                 row()
 
                 stack { cell ->
-                    progressBar = image(SkinImage.LIFE_BAR.atlasKey).apply {
-                        scaleX = 0f
-                    }
                     progressText = textButton(bundle["loading"], SkinTextButton.LABEL_TRANSPARENT.name)
                     cell.padLeft(ELEMENT_PADDING).padRight(ELEMENT_PADDING).padBottom(ELEMENT_PADDING)
                 }
@@ -118,7 +114,6 @@ class LoadingScreen(
         game.addScreen(GameScreen(game))
         game.addScreen(GameOverScreen(game))
         game.addScreen(MenuScreen(game))
-        touchToBegin += forever(sequence(fadeIn(ACTOR_FADE_IN_TIME) + fadeOut(ACTOR_FADE_OUT_TIME)))
         progressText.label.setText(bundle["loaded"])
     }
 
@@ -133,7 +128,6 @@ class LoadingScreen(
             game.setScreen<MenuScreen>()
         }
 
-        progressBar.scaleX = assets.progress.percent
         stage.run {
             viewport.apply()
             act()
